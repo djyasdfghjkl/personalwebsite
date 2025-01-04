@@ -1,0 +1,68 @@
+// mixins.scss
+
+// 1. 定义 transition mixin
+@mixin transition($duration, $timing: ease) {
+  transition: all $duration $timing;
+}
+
+// 2. 定义 size mixin，用于设置元素的宽高
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// 3. 定义 box-sizing mixin
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
+
+// 4. 定义 coverer mixin，类似于设置 position: absolute; top: 0; left: 0 等
+@mixin coverer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// 5. 定义 relative mixin，用于设置 position: relative 并传递偏移值
+@mixin relative($offset: 0) {
+  position: relative;
+  top: $offset;
+  left: $offset;
+}
+
+// 6. 定义 translateX mixin，设置元素的水平位移
+@mixin translateX($value) {
+  transform: translateX($value);
+  -webkit-transform: translateX($value);
+  -ms-transform: translateX($value);
+}
+
+// 7. 定义 animation mixin
+@mixin animation($name, $duration, $timing: linear, $iteration: infinite) {
+  animation: $name $duration $timing $iteration;
+  -webkit-animation: $name $duration $timing $iteration;
+  -moz-animation: $name $duration $timing $iteration;
+  -o-animation: $name $duration $timing $iteration;
+}
+
+// mixins.scss
+
+// 8. 定义 keyframes mixin
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+}
