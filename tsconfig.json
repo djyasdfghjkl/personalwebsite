@@ -1,4 +1,12 @@
 {
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "types": ["vite/client", "vue"]
+  },
   "files": [],
   "references": [
     {
